@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/style.css" rel="stylesheet" />
+    <title>Calculadora De Investimentos Impressionadora</title>
+  </head>
+  <body class="h-dvh grid grid-cols-3 grid-rows-2">
+    <aside class="row-span-2 bg-emerald-300 flex flex-col justify-between py-5 px-2">
+      <h1 class="text-2xl font-bold px-6">Calculadora de Investimentos</h1>
+      <form class="w-full">
+        <div class="starting-amount flex w-full flex-col px-6 my-2">
+          <label for="starting-amount" class="font-semibold">Investimento Inicial</label>
+          <div class="flex w-full">
+            <input value="R$" type="text" class="w-1/6 bg-[#1DD793] font-semibold rounded-l-lg text-center" disabled />
+            <input type="text" id="starting-amount" class="bg-white w-5/6 rounded-r-lg px-2" placeholder="0.00" />
+          </div>
+        </div>
+        <div class="additional-contribution flex w-full flex-col px-6 my-2">
+          <label for="additional-contribution" class="font-semibold">Aportes Adcionais</label>
+          <div class="flex w-full">
+            <input value="R$" type="text" class="w-1/6 bg-[#1DD793] font-semibold rounded-l-lg text-center" disabled />
+            <input type="text" id="additional-contribution" class="bg-white w-5/6 rounded-r-lg px-2" placeholder="0.00" />
+          </div>
+        </div>
+        <div class="time-amount-period flex w-full flex-col px-6 my-2">
+          <label for="time-amount-period" class="font-semibold">Prazo</label>
+          <div class="flex w-full">
+            <input type="text" id="time-amount-period" class="bg-white w-2/3 rounded-l-lg px-2" placeholder="0" />
+            <select
+              id="evaluation-period"
+              class="bg-white w-1/3 rounded-r-lg text-center border-l-2 border-emerald-600 hover:bg-emerald-950 hover:text-slate-200"
+            >
+              <option value="montlhy">Mensal</option>
+              <option value="yearly">Anual</option>
+            </select>
+          </div>
+        </div>
+        <div class="return-rate flex w-full flex-col px-6 my-2">
+          <label for="return-rate" class="font-semibold">Rentabilidade</label>
+          <div class="flex w-full">
+            <input value="%" type="text" class="w-1/6 bg-[#1DD793] font-bold rounded-l-lg text-center" disabled />
+            <input type="text" id="return-rate" class="bg-white w-1/2 px-2" placeholder="0" />
+            <select
+              id="evaluation-period"
+              class="bg-white w-1/3 rounded-r-lg text-center border-l-2 border-emerald-600 hover:bg-emerald-950 hover:text-slate-200"
+            >
+              <option value="montlhy">Mensal</option>
+              <option value="yearly">Anual</option>
+            </select>
+          </div>
+        </div>
+        <div class="tax-rate flex w-full flex-col px-6 my-2">
+          <label for="tax-rate" class="font-semibold">Impostos Sobre Lucro</label>
+          <div class="flex w-full">
+            <input value="%" type="text" class="w-1/6 bg-[#1DD793] font-bold rounded-l-lg text-center" disabled />
+            <input type="text" id="tax-rate" class="bg-white w-5/6 rounded-r-lg px-2" placeholder="0" />
+          </div>
+        </div>
+      </form>
+      <div class="flex h-12 px-6 my-8 w-full gap-3">
+        <button
+          class="w-1/2 bg-emerald-800 rounded-lg text-slate-200 hover:bg-emerald-950 text-base hover:text-lg transition-all duration-200 ease-linear"
+        >
+          Calcular
+        </button>
+        <button class="w-1/2 rounded-lg hover:bg-emerald-500 text-base hover:text-lg transition-all duration-200 ease-linear">
+          Limpar
+        </button>
+      </div>
+    </aside>
+    <main>
+      <p>Resultado</p>
+    </main>
+  </body>
+</html>
