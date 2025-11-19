@@ -140,5 +140,5 @@ for (const formElement of investmentForm) {
     formElement.addEventListener('blur', validateInput);
   }
 }
-investmentForm.addEventListener('submit', renderProgression);
+// investmentForm.addEventListener('submit', renderProgression);
 clearFormBtn.addEventListener('click', clearForm);
