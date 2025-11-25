@@ -155,5 +155,19 @@ for (const formElement of investmentForm) {
     formElement.addEventListener('blur', validateInput);
   }
 }
+
+const mainEl = document.querySelector('main');
+const carouselEl = document.getElementById('carousel');
+const nextBtn = document.getElementById('slide-arrow-next');
+const previousBtn = document.getElementById('slide-arrow-previous');
+
+nextBtn.addEventListener('click', () => {
+  carouselEl.scrollLeft += mainEl.clientWidth;
+});
+
+previousBtn.addEventListener('click', () => {
+  carouselEl.scrollLeft -= mainEl.clientWidth;
+});
+
 investmentForm.addEventListener('submit', renderProgression);
 clearFormBtn.addEventListener('click', clearForm);
