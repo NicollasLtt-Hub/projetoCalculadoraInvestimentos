@@ -32,6 +32,7 @@ function renderProgression(e) {
   }
 
   resetCharts();
+  deleteTable();
 
   const startingAmount = Number(document.getElementById('starting-amount').value.replace(',', '.'));
   const additionalContribution = Number(document.getElementById('additional-contribution').value.replace(',', '.'));
@@ -113,6 +114,16 @@ function resetCharts() {
   }
 }
 
+function deleteTable() {
+  const table = document.getElementById('table-results');
+  const tableHead = table.querySelector('thead');
+  const tableBody = table.querySelector('tbody');
+  if (tableHead || tableBody) {
+    tableHead.remove();
+    tableBody.remove();
+  }
+}
+
 function clearForm() {
   const inputsWithName = investmentForm.querySelectorAll('input[name]');
   inputsWithName.forEach((input) => {
@@ -126,6 +137,7 @@ function clearForm() {
   });
 
   resetCharts();
+  deleteTable();
 }
 
 function validateInput(e) {
